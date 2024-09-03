@@ -55,4 +55,20 @@ console.log(2**3)//two power three//8
 console.log(2/3)//0.6
 console.log(2%3)//1
 
+//some conversion are very treeky so this is important
+
+console.log("1"+3);//13
+console.log(3+"1");//31  //when string are comes into first, the value are same as it is print of the output.
+console.log("1"+2+2);//122
+console.log(1+2+"2");//32
+
+
+console.log(true);//true
+console.log(+true);//1 
+
+
+//link to study
+//https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
+
+
 
