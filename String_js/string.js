@@ -14,4 +14,57 @@ console.log(`hello my name is ${name} by occupation i am student and my repo cou
 //string declared 
 
 const gameName=new String('rohit');
-console.log(gameName);
+console.log(gameName);             // [String:'rohit'] 
+console.log(gameName.valueOf());     //rohit
+
+//String method
+/*
+  
+
+   anchor()
+   at()
+   big()
+   blink()
+   bold()
+   charAt()
+   charCodeAt()
+   concat()
+   cosnstructor()
+   endsWith()
+   fixed()
+   fontcolor()
+   fontsize()
+   includes()
+   indexOf()
+   isWellFormed()
+   italics()
+   lastIndexOf()
+   link()
+   localeCompare()
+   match()
+   matchAll()
+   normalize()
+   padEnd()
+   padStart()
+   repeat()
+   replace()
+   replaceAll()
+   search()
+   slice()
+   split()
+   statsWith()
+   stike()
+   sub()
+   toLocaleLowerCase()
+   toLacaleUpperCase()
+   toUpperCase()
+   toString()
+   toUpperCase()
+   toWellFormed()
+   trimEnd()
+   trimRight()
+   trimStart()
+   balueOf()
+   symbol(Symbol.iterator)
+   
+*/
