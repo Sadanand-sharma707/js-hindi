@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM full concept</title>
+</head>
+<body style="background-color: #212121;color:#fff">
+<div class="parent">
+    <div class="day" id="mon">monday</div>
+    <div class="day" id="tue">tuesday</div>
+    <div class="day" id="wed">wednesday</div>
+    <div class="day" id="thurs">thursday</div>
+    <div class="day" id="fri">friday</div>
+    <div class="day" id="satur">saturday</div>
+    <div class="day" id="sun">sunday</div>
+</div>
+<ul class="unorderList">
+    <li class="fruitName">mango</li>
+    <li class="fruitName">banana</li>
+    <li class="fruitName">apple</li>
+    <li class="fruitName">litchi</li>
+</ul>
+
+
+</body>
+<!--link javascript file-->
+<script src="DOMfullConcept.js"></script>
+
+<script>
+
+//Access element by Id
+
+const mon=document.getElementById('mon');
+//console.log(mon.innerHTML);          //monday
+
+//Access only Id
+
+const Id=document.getElementById('fri').id;
+//console.log(Id);  //mon
+
+//Access Id
+
+const ID=document.getElementById('satur').getAttribute('id');
+//console.log(ID);  //mon
+
+//Access Element class
+const classs=mon.getAttribute("class");
+//console.log(classs); //day
+
+
+
+
+
+
+
+
+</script>
+</html>
