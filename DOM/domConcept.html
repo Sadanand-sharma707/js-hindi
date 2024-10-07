@@ -23,6 +23,11 @@
 </ul>
 
 
+<div class="newElement">
+    <p>hello world</p>
+</div>
+
+
 </body>
 <!--link javascript file-->
 <script src="DOMfullConcept.js"></script>
@@ -53,6 +58,30 @@ const classs=mon.getAttribute("class");
 
 
 
+
+    function paragraph(para){
+        const paragraphs=document.createElement('h1');
+        paragraphs.id="h1";
+        paragraphs.innerHTML=`${para}`;
+        const appends=document.querySelector('.newElement');
+        appends.appendChild(paragraphs);
+    }
+
+    paragraph("python");
+
+
+
+    function nextParagraph(nextPara){
+        const nextParagraphs=document.createElement('h2');
+        nextParagraphs.id="h2";
+        const nextText=document.createTextNode(nextPara);
+        nextParagraphs.appendChild(nextText);
+        const parent=document.querySelector('.newElement');
+        parent.appendChild(nextParagraphs);
+
+
+    }
+    nextParagraph("hellow");
 
 
 </script>

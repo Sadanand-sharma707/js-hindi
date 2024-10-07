@@ -141,6 +141,29 @@ add_language("computer graphics");
 //Edit
 //******/
 
+//first approach
+
+const secondlang=document.querySelector("li:nth-child(2)")
+secondlang.innerHTML="digvijay nath pg college";//it is also change the text of second list of the unorderlist
+                                                 //but it is not a correct way
+//second approach
+  
+  const newli=document.createElement('li');
+  newli.textContent="DNPGC";
+  secondlang.replaceWith(newli);//using refrence and replace it
 
 //outerHTML
-//
+/**********/
+const firstLang=document.querySelector("li:first-child");
+firstLang.outerHTML='<li>typeScript</li>';
+
+
+
+
+
+
+//remove
+/********/
+
+const lastLang=document.querySelector('li:last-child');
+lastLang.remove();
