@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color:#414141;
+            color:aliceblue;
+        }
+    </style>
+    <title>event full concept</title>
+</head>
+<body>
+    <h2>Amazing image</h2>
+    <div>
+    <ul id="images">
+        <li><img id="treeImg" width="150px" height="150px"src="https://static.addtoany.com/images/dracaena-cinnabari.jpg"alt="Trees"></li>
+        <li><img id="parrotImg" width="150px" height="150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS07mcO6IT0UabVmoqN3TE14IbQGbbhOfDy0g&s" alt="parrotimg"> </li>
+        <li><img id="rabbitImg" width="150px" height="150px" src="https://img.freepik.com/premium-photo/beautiful-rabbit-photography_1004218-47.jpg" alt="RabbitImg"></li>
+        <li><img id="owlImg" height="150px" width="150px"  src="https://cdn.britannica.com/11/12111-050-31EC4AE8/Elf-owl.jpg" alt="Owlimg"></li>
+        <li><img id="rainbowImg" height="150px" width="150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfa5jypy8AGE_V4inF_rmsRPpIS4eMmfsS1g&s" alt="RainbowImg" ></li>
+        <li><a style="color:aliceblue;" href="https://google.com" id="google">Google</a> </li>
+    </ul>
+</div>
+</body>
+<script>
+
+//onClick event
+//*************
+    
+     const clickEvent=document.getElementById('owlImg');
+     clickEvent.onclick=function() {//onclick method
+     //alert("owl clicked");
+ }
+
+ //attachEvent() ,  this is the best approch same like as addEventListener
+ //jQuery-on  , it is framwork
+
+ //type , timestamp , defaultPrevented
+// targer , toElement , srcElement , currentTarget
+// clientX , clientY, screenX, screenY
+// altkey, ctrlkey , shiftkey , keyCode
+
+
+
+
+//click event
+//************
+
+ const clickevent= document.getElementById('owlImg');//any one event when you are add,
+ // then first you access those  element where added a event 
+
+
+ clickevent.addEventListener('click',function(e) {// when you are add addEventlisiner important is that where add function also
+   // console.log(e);//browser event and environment event
+    console.log("owl clicked again"); 
+   e.stopPropagation();  //not bubling element
+},false);
+
+const rabbit= document.querySelector('#rabbitImg');
+rabbit.addEventListener('click',function(event) {
+   // console.log(event);// javaScript run are browser event and environment event
+    console.log("hello");
+    
+},false);
+
+//event propegation
+//bubling
+// its mean inside to outside
+
+
+const image=document.querySelector('#images');
+image.addEventListener('click',function(event){
+    console.log("clicked insied the ul");
+},false);
+
+
+
+//capturing mode
+//its means outside to inside
+
+
+/*const image=document.querySelector('#images');
+image.addEventListener('click',function(event){
+    console.log("clicked inside the ul");
+},true);//if using  (True)
+*/
+
+
+//stop default behaviour of ancher tag
+const google=document.querySelector('#google');
+google.addEventListener('click',function(e){
+   console.log('google clicked');
+    e.preventDefault();//by default clicked google link that are open google link but using this method(preventDefault) that is stoped.
+    e.stopPropagation();//this ancher tage not use bubling up
+},false);
+
+
+
+//project type code
+
+//question: you are click any one image that image are remove,  that is the goal.
+
+const unorderList=document.querySelector('#images');
+ unorderList.addEventListener('click',function(event){
+      //console.log(event);
+      console.log(event.target.tagName);
+      //console.log(event.target.parentNode);
+
+      if(event.target.tagName==='IMG'){
+        let removeIt= event.target.parentNode;
+      removeIt.remove();//owl and google ancherTag are not remove becouse there are using stoppropegation method.
+      //removeIt.parentNode.removeChild(removeIt)
+      }
+      
+      
+    },false);
+
+</script>
+</html>
